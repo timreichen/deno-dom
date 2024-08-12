@@ -311,7 +311,7 @@ export class Document extends Node {
     return this._nwapi.first(selectors, this) as T;
   }
 
-  querySelectorAll<T = Element>(selectors: string): NodeList<T> {
+  querySelectorAll<T extends Node = Element>(selectors: string): NodeList<T> {
     const nodeList = new NodeList();
     const mutator = nodeList[nodeListMutatorSym]();
 

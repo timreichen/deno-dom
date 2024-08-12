@@ -904,7 +904,7 @@ export class Element extends Node {
     return this.ownerDocument!._nwapi.first(selectors, this) as T;
   }
 
-  querySelectorAll<T = Element>(selectors: string): NodeList<T> {
+  querySelectorAll<T extends Node = Element>(selectors: string): NodeList<T> {
     if (!this.ownerDocument) {
       throw new Error("Element must have an owner document");
     }
