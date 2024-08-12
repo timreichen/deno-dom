@@ -192,7 +192,7 @@ for (
   NodeListClass.prototype[instanceMethod] = undefined;
 }
 
-export interface NodeList<T extends Node = Node> {
+export interface NodeList<T = Node> {
   new (): NodeList;
   readonly [index: number]: Node;
   readonly length: number;
